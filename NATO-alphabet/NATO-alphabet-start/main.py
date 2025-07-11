@@ -1,21 +1,4 @@
-# student_dict = {
-#     "student": ["Angela", "James", "Lily"],
-#     "score": [56, 76, 98]
-# }
-#
-# #Looping through dictionaries:
-# for (key, value) in student_dict.items():
-#     #Access key and value
-#     pass
-#
-# import pandas
-# student_data_frame = pandas.DataFrame(student_dict)
-#
-# #Loop through rows of a data frame
-# for (index, row) in student_data_frame.iterrows():
-#     #Access index and row
-#     #Access row.student or row.score
-#     pass
+
 from tkinter.font import names
 
 # Keyword Method with iterrows()
@@ -32,6 +15,16 @@ nato_phonetic = pandas.read_csv("nato_phonetic_alphabet.csv")
 
 names_dic = {row.letter:row.code for (index,row) in nato_phonetic.iterrows()}
 
-user_input = input("Enter a word").upper()
-output_list = [let + "-" + names_dic[let] for let in user_input]
-print(output_list)
+def generate_phonetic():
+
+    user_input = input("Enter a word : ").upper()
+    try:
+        # output_list = [let + "-" + names_dic[let] for let in user_input]
+        output_list = [names_dic[letter] for letter in user_input]
+    except KeyError:
+        print("Sorry. Only letters in the alphabet please.")
+        generate_phonetic()
+    else:
+        print(output_list)
+
+generate_phonetic()
