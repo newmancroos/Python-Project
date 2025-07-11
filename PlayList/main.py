@@ -19,12 +19,7 @@ song_list=song_names_spans = soup.select("li ul li h3")
 song_names = [song.getText().strip() for song in song_names_spans]
 # print(song_names)
 
-sp = spotipy.Spotify(
-    auth_manager=SpotifyOAuth(
-        scope="playlist-modify-private", redirect_uri="https://example.com/callback", client_id="fc0bcbea6d4941968e295dcf3e547867",
-        client_secret="a35abe163f794a25a9b5b72207742cdd", show_dialog=True, cache_path="token.txt", username="newmancroos"
-    )
-)
+# code found in text file***************************
 
 userid=sp.current_user()["id"]
 song_uris=[]
