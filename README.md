@@ -31,17 +31,17 @@ sp = spotipy.Spotify(
 )
 
 
-##Python Web Development
-###What is Flask and DJango?
+## Python Web Development
+### What is Flask and DJango?
     * Flask and Django are both popular web framework wrtieen in Python, but they differ significantly in their approch and features.
-    #Flask:
+    # Flask:
         <b>Microframework:</b>
         - Flask is considered a "microframework" because it provides only the essential tools for building web applications, such as routing and request handling. It offers a minimalist design, giving developers more control and flexibility in choosing external libraries and components.
         - Flexibility and Customization:
                 Flask does not impose a rigid project structure or specific development patterns. This allows developers to customize the framework to their needs and freely manage files, structure directories, and implement features.
         - Use Cases:
         Flask is often chosen for smaller to medium-sized projects, APIs, microservices, and rapid prototyping due to its lightweight nature and ease of setup.
-    #Django:
+    # Django:
     - Convention over Configuration:
         Django promotes a conventional structure and development patterns, which can streamline development for larger, more complex applications.
     - Use Cases:
