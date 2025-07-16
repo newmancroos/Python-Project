@@ -46,3 +46,9 @@ sp = spotipy.Spotify(
         Django promotes a conventional structure and development patterns, which can streamline development for larger, more complex applications.
     - Use Cases:
         Django is well-suited for building large-scale, complex web applications such as content management systems (CMS), e-commerce platforms, and social networks, where rapid development and scalability are crucial. 
+
+#Installing Flask:
+- import flask   -> and then using red mark we can install it
+- using Python packages incon in the Pycharm editor
+- Using pip in terminal -- > pip install Flask
+  
