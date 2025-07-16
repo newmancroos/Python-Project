@@ -54,10 +54,11 @@ sp = spotipy.Spotify(
 
 #Sample Web end=point:
     <pre>
-    from flask import Flask
-    @app.route('/')
-    def hello_world():
-        return "Hello world!"
+        from flask import Flask
+        app = Flask(__name__)
+        @app.route('/')
+        def hello_world():
+            return "Hello world!"
     </pre>
 
 - To run the end point in
