@@ -51,4 +51,16 @@ sp = spotipy.Spotify(
 - import flask   -> and then using red mark we can install it
 - using Python packages incon in the Pycharm editor
 - Using pip in terminal -- > pip install Flask
-  
+
+#Sample Web end=point:
+    <pre>
+    from flask import Flask
+    @app.route('/')
+    def hello_world():
+        return "Hello world!"
+    </pre>
+
+- To run the end point in
+      * Mac -> <b>export FLASK_APP=hello.py</b>   and then flask run<br/>
+      * Windows  -> <b>set FLASK_APP=hellp.py</b>  and then flask run<br/>
+  and then ->  <b>flask --app hello run</b>
