@@ -63,5 +63,16 @@ sp = spotipy.Spotify(
 
 - To run the end point in
       * Mac -> <b>export FLASK_APP=hello.py</b>   and then flask run<br/>
+
+
+
+## Notes:
+<p>
+    We can easily edit any html content from Chrome directly by using
+    <pre>
+        document.body.contentEditable=true
+    </pre>
+    in Chrome console
+</p>
       * Windows  -> <b>set FLASK_APP=hellp.py</b><br/>
   and then ->  <b>flask --app hello run</b>
