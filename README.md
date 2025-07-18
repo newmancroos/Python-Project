@@ -72,7 +72,7 @@ sp = spotipy.Spotify(
     <pre>
         document.body.contentEditable=true
     </pre>
-    in Chrome console
+    in Chrome console. Once we edit, delete the desoign, we need to save the page as html and then we can replce the existing page our side
 </p>
       * Windows  -> <b>set FLASK_APP=hellp.py</b><br/>
   and then ->  <b>flask --app hello run</b>
