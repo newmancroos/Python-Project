@@ -24,8 +24,8 @@ def guessage(name):
     return render_template("guess.html", name=name, gender=gender, age=age)
 
 
-@app.route("/blog")
-def blog():
+@app.route("/blog/<num>")
+def get_blog(num):
    blog_post_url = "https://api.npoint.io/0e8f03ddef34d6db0fdd"
    response = requests.get(blog_post_url)
    all_posts=response.json()
