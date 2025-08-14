@@ -116,3 +116,8 @@ bcrypt's adjustable work factor allows it to remain secure against increasing co
 bcrypt's design makes it resistant to brute-force attacks, rainbow table attacks, and is less susceptible to GPU acceleration compared to MD5.<br/>
 In summary, while MD5 may still have non-security-critical applications, bcrypt is the recommended and industry-standard choice for securely hashing passwords due to its inherent design for security and resistance to modern attack techniques.
    </pre>
+
+## Salt Round
+- Adding salt to a password and Hashing it is Round One <br/>
+- Adding Salt to the Password and Hasing, and then adding another salt to the Hashed code and then Hashing it again is Rout Two. It will go more round
+  
