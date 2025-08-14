@@ -88,31 +88,31 @@ sp = spotipy.Spotify(
 <b>MD5 and bcrypt are both hashing algorithms, but they differ significantly in their design, intended use, and security implications, particularly for password storage.</b><br/>
 **MD5 (Message-Digest Algorithm 5):** <br/>
 **Purpose:** <br/>
-MD5 was designed as a fast and efficient algorithm for generating fixed-size hash values for data integrity checks and message authentication.
+MD5 was designed as a fast and efficient algorithm for generating fixed-size hash values for data integrity checks and message authentication.<br/>
 **Speed:** <br/>
-It is computationally fast, making it suitable for applications where quick hashing is required, such as verifying file integrity or creating checksums.
+It is computationally fast, making it suitable for applications where quick hashing is required, such as verifying file integrity or creating checksums.<br/>
 **Security:** <br/>
 MD5 is considered cryptographically broken for security-sensitive applications like password storage due to its vulnerability to collision attacks (where two different inputs produce the same hash) and pre-image attacks (recovering the original input from the hash).
 
 <br/><br/><br/>
 **bcrypt:** <br/>
 **Purpose:** <br/>
-bcrypt is specifically designed for securely hashing passwords, prioritizing resistance to brute-force and rainbow table attacks.
+bcrypt is specifically designed for securely hashing passwords, prioritizing resistance to brute-force and rainbow table attacks.<br/>
 **Speed:** <br/>
-It is intentionally designed to be slow and computationally intensive, making it difficult for attackers to try many password combinations quickly. This "work factor" is adjustable, allowing the algorithm to be scaled with increasing computational power.
+It is intentionally designed to be slow and computationally intensive, making it difficult for attackers to try many password combinations quickly. This "work factor" is adjustable, allowing the algorithm to be scaled with increasing computational power.<br/>
 **Salting:** <br/>
-bcrypt automatically incorporates a random salt into each password hash, meaning the same plaintext password will produce a different hash each time it's hashed. This thwarts rainbow table attacks.
+bcrypt automatically incorporates a random salt into each password hash, meaning the same plaintext password will produce a different hash each time it's hashed. This thwarts rainbow table attacks.<br/>
 **Security:** <br/>
-bcrypt is considered a strong and secure algorithm for password hashing due to its adaptive nature, salting, and resistance to GPU optimization for cracking.
+bcrypt is considered a strong and secure algorithm for password hashing due to its adaptive nature, salting, and resistance to GPU optimization for cracking.<br/>
 
 ### Key Differences and Why bcrypt is Preferred for Passwords:
 **Security:** <br/>
-bcrypt's design directly addresses the vulnerabilities that make MD5 unsuitable for password hashing. Its slowness and salting mechanism significantly increase the cost and time required for attackers to compromise passwords.
+bcrypt's design directly addresses the vulnerabilities that make MD5 unsuitable for password hashing. Its slowness and salting mechanism significantly increase the cost and time required for attackers to compromise passwords.<br/>
 **Purpose:** <br/>
 MD5 is a general-purpose hashing algorithm, while bcrypt is a specialized password hashing function.
 **Adaptability:** <br/>
-bcrypt's adjustable work factor allows it to remain secure against increasing computational power over time, a feature MD5 lacks.
+bcrypt's adjustable work factor allows it to remain secure against increasing computational power over time, a feature MD5 lacks.<br/>
 **Resistance to Attacks:** <br/>
-bcrypt's design makes it resistant to brute-force attacks, rainbow table attacks, and is less susceptible to GPU acceleration compared to MD5.
+bcrypt's design makes it resistant to brute-force attacks, rainbow table attacks, and is less susceptible to GPU acceleration compared to MD5.<br/>
 In summary, while MD5 may still have non-security-critical applications, bcrypt is the recommended and industry-standard choice for securely hashing passwords due to its inherent design for security and resistance to modern attack techniques.
    </pre>
