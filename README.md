@@ -94,7 +94,7 @@ It is computationally fast, making it suitable for applications where quick hash
 **Security:** <br/>
 MD5 is considered cryptographically broken for security-sensitive applications like password storage due to its vulnerability to collision attacks (where two different inputs produce the same hash) and pre-image attacks (recovering the original input from the hash).
 
-<br/><br/><br/>
+<br/><br/>
 **bcrypt:** <br/>
 **Purpose:** <br/>
 bcrypt is specifically designed for securely hashing passwords, prioritizing resistance to brute-force and rainbow table attacks.<br/>
@@ -109,7 +109,7 @@ bcrypt is considered a strong and secure algorithm for password hashing due to i
 **Security:** <br/>
 bcrypt's design directly addresses the vulnerabilities that make MD5 unsuitable for password hashing. Its slowness and salting mechanism significantly increase the cost and time required for attackers to compromise passwords.<br/>
 **Purpose:** <br/>
-MD5 is a general-purpose hashing algorithm, while bcrypt is a specialized password hashing function.
+MD5 is a general-purpose hashing algorithm, while bcrypt is a specialized password hashing function.<br/>
 **Adaptability:** <br/>
 bcrypt's adjustable work factor allows it to remain secure against increasing computational power over time, a feature MD5 lacks.<br/>
 **Resistance to Attacks:** <br/>
