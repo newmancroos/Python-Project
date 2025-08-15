@@ -118,7 +118,7 @@ In summary, while MD5 may still have non-security-critical applications, bcrypt 
    </pre>
 
 ### Werkzeug webpag : https://werkzeug.palletsprojects.com/en/stable/utils/#module-werkzeug.security
-### Flask Login Document : [pip install flask-login](https://flask-login.readthedocs.io/en/latest/)
+### Flask Login Document : https://flask-login.readthedocs.io/en/latest/
 ### Flask Messages : https://flask.palletsprojects.com/en/stable/patterns/flashing/
 
 
