@@ -117,6 +117,12 @@ bcrypt's design makes it resistant to brute-force attacks, rainbow table attacks
 In summary, while MD5 may still have non-security-critical applications, bcrypt is the recommended and industry-standard choice for securely hashing passwords due to its inherent design for security and resistance to modern attack techniques.
    </pre>
 
+### Werkzeug webpag : https://werkzeug.palletsprojects.com/en/stable/utils/#module-werkzeug.security
+### Flask Login Document : [pip install flask-login](https://flask-login.readthedocs.io/en/latest/)
+### Flask Messages : https://flask.palletsprojects.com/en/stable/patterns/flashing/
+
+
+
 ## Salt Round
 - Adding salt to a password and Hashing it is Round One <br/>
 - Adding Salt to the Password and Hasing, and then adding another salt to the Hashed code and then Hashing it again is Rout Two. It will go more round
