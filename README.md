@@ -140,7 +140,7 @@ In summary, while MD5 may still have non-security-critical applications, bcrypt 
 9. git diff filename   --> give the different between add/ committed file
 
 10. git remote add origin <GitHub .git path>
-11. git branch _m main
+11. git branch -M main
 12. git push -u origin main
 
 
