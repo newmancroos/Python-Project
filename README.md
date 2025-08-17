@@ -145,3 +145,8 @@ In summary, while MD5 may still have non-security-critical applications, bcrypt 
 
 
 ### To remove file from staging but not rollback the local copy  -> <b>git rm --cached -r . </b>
+
+
+## Great collection of projects
+https://github.com/awesome-selfhosted/awesome-selfhosted
+
