@@ -150,3 +150,4 @@ In summary, while MD5 may still have non-security-critical applications, bcrypt 
 ## Great collection of projects
 https://github.com/awesome-selfhosted/awesome-selfhosted
 
+## What is Fork in github  -> We can make copy of someone's repository under our github account. whole repository will be copied into our githuib.
