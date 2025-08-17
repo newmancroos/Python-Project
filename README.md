@@ -76,3 +76,78 @@ sp = spotipy.Spotify(
 </p>
       * Windows  -> <b>set FLASK_APP=hellp.py</b><br/>
   and then ->  <b>flask --app hello run</b>
+
+
+
+## Securing Password
+1. Plain Password
+2. Encrypt (caesar cipher - shifting letter)
+3. Hashing ( Revers is not posible - Using Hashing function SHA250, SHA512. )
+4. Hashing and Salting  (random charector along with user password will be hashed)  - After generating the Hashed+Salted code the Salt and generated hashed code will be saved in the user table for validating the password when the login.
+   <pre>
+<b>MD5 and bcrypt are both hashing algorithms, but they differ significantly in their design, intended use, and security implications, particularly for password storage.</b><br/>
+**MD5 (Message-Digest Algorithm 5):** <br/>
+**Purpose:** <br/>
+MD5 was designed as a fast and efficient algorithm for generating fixed-size hash values for data integrity checks and message authentication.<br/>
+**Speed:** <br/>
+It is computationally fast, making it suitable for applications where quick hashing is required, such as verifying file integrity or creating checksums.<br/>
+**Security:** <br/>
+MD5 is considered cryptographically broken for security-sensitive applications like password storage due to its vulnerability to collision attacks (where two different inputs produce the same hash) and pre-image attacks (recovering the original input from the hash).
+
+<br/><br/>
+**bcrypt:** <br/>
+**Purpose:** <br/>
+bcrypt is specifically designed for securely hashing passwords, prioritizing resistance to brute-force and rainbow table attacks.<br/>
+**Speed:** <br/>
+It is intentionally designed to be slow and computationally intensive, making it difficult for attackers to try many password combinations quickly. This "work factor" is adjustable, allowing the algorithm to be scaled with increasing computational power.<br/>
+**Salting:** <br/>
+bcrypt automatically incorporates a random salt into each password hash, meaning the same plaintext password will produce a different hash each time it's hashed. This thwarts rainbow table attacks.<br/>
+**Security:** <br/>
+bcrypt is considered a strong and secure algorithm for password hashing due to its adaptive nature, salting, and resistance to GPU optimization for cracking.<br/>
+
+### Key Differences and Why bcrypt is Preferred for Passwords:
+**Security:** <br/>
+bcrypt's design directly addresses the vulnerabilities that make MD5 unsuitable for password hashing. Its slowness and salting mechanism significantly increase the cost and time required for attackers to compromise passwords.<br/>
+**Purpose:** <br/>
+MD5 is a general-purpose hashing algorithm, while bcrypt is a specialized password hashing function.<br/>
+**Adaptability:** <br/>
+bcrypt's adjustable work factor allows it to remain secure against increasing computational power over time, a feature MD5 lacks.<br/>
+**Resistance to Attacks:** <br/>
+bcrypt's design makes it resistant to brute-force attacks, rainbow table attacks, and is less susceptible to GPU acceleration compared to MD5.<br/>
+In summary, while MD5 may still have non-security-critical applications, bcrypt is the recommended and industry-standard choice for securely hashing passwords due to its inherent design for security and resistance to modern attack techniques.
+   </pre>
+
+### Werkzeug webpag : https://werkzeug.palletsprojects.com/en/stable/utils/#module-werkzeug.security
+### Flask Login Document : https://flask-login.readthedocs.io/en/latest/
+### Flask Messages : https://flask.palletsprojects.com/en/stable/patterns/flashing/
+
+
+
+## Salt Round
+- Adding salt to a password and Hashing it is Round One <br/>
+- Adding Salt to the Password and Hasing, and then adding another salt to the Hashed code and then Hashing it again is Rout Two. It will go more round
+
+## Github push an existing project
+
+1. Install Gitbash
+2. Within working directory -. git init
+3. git status  ->  gives pending commit files
+4. git add . --> Ready to commit
+5. git commit -m "message"   --> it will locally commit the changes
+6. git log  -> give details about the last commit
+7. Git add adds the files to staging and then git commit adds it to local git
+8. git checkout . will rollback any pending commit (after git add )
+9. git diff filename   --> give the different between add/ committed file
+
+10. git remote add origin <GitHub .git path>
+11. //git branch -M main  -> This step no need
+12. git push -u origin main
+
+
+### To remove file from staging but not rollback the local copy  -> <b>git rm --cached -r . </b>
+
+
+## Great collection of projects
+https://github.com/awesome-selfhosted/awesome-selfhosted
+
+## What is Fork in github  -> We can make copy of someone's repository under our github account. whole repository will be copied into our githuib.
