@@ -15,7 +15,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 
 from flask_gravatar import Gravatar
-
+import os
 
 '''
 Make sure the required packages are installed: 
@@ -31,7 +31,8 @@ This will install the packages from the requirements.txt for this project.
 '''
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+# app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
@@ -43,7 +44,7 @@ gravatar = Gravatar(app, size=50, rating="g", default="retro", force_default=Fal
 # CREATE DATABASE
 class Base(DeclarativeBase):
     pass
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///posts.db") #sqlite:///posts.db'
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
@@ -248,4 +249,5 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5002)
+    # app.run(debug=True, port=5002)
+    app.run(debug=False, port=5002)
