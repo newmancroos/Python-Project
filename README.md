@@ -162,8 +162,10 @@ In summary: normal web servers can't run Python applications, so a special type 
 There are many WSGIs to choose from, but we'll use the most popular - gunicorn. That way our hosting provider will call gunicorn to run our code.
 
 Next, we need to tell our hosting provider about our gunicorn server, what our app is called, and how to run our Flask app. We do that using a config file called a Procfile.
-<p>
+
 ### Creating a Procfile
+<p>
+
     3. Create a new file in the project top-level folder called Procfile. When you create the new file, PyCharm will prompt you to track the new file under git version control. Agree by clicking add.
 
 NOTE: make sure you spell the name of the file exactly as you see above, with a capital P and no file extension.
