@@ -125,7 +125,7 @@ In summary, while MD5 may still have non-security-critical applications, bcrypt 
 
 ## Salt Round
 - Adding salt to a password and Hashing it is Round One <br/>
-
+- Adding Salt to the Password and Hasing, and then adding another salt to the Hashed code and then Hashing it again is Rout Two. It will go more round
 
 ## Github push an existing project
 
@@ -143,5 +143,5 @@ In summary, while MD5 may still have non-security-critical applications, bcrypt 
 11. git branch _m main
 12. git push -u origin main
 
-- Adding Salt to the Password and Hasing, and then adding another salt to the Hashed code and then Hashing it again is Rout Two. It will go more round
+
   
