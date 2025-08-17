@@ -151,3 +151,13 @@ In summary, while MD5 may still have non-security-critical applications, bcrypt 
 https://github.com/awesome-selfhosted/awesome-selfhosted
 
 ## What is Fork in github  -> We can make copy of someone's repository under our github account. whole repository will be copied into our githuib.
+
+
+## Hosting Python Application:
+
+WSGI stands for **Web Server Gateway Interface** and it's described here: https://www.python.org/dev/peps/pep-3333/
+
+In summary: normal web servers can't run Python applications, so a special type of server was created (WSGI) to run our Flask app.  Essentially, a WSGI server standardises the language and protocols between our Python Flask application and the host server.
+
+There are many WSGIs to choose from, but we'll use the most popular - gunicorn. That way our hosting provider will call gunicorn to run our code.
+
