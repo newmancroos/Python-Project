@@ -200,3 +200,50 @@ Vercel                                  $0                       Hobby
 PythonAnywhere              $0                       Beginner 
 </pre>
 </p>
+
+<p>
+    The nice thing about most of these providers is that they can easily deploy your app straight from a GitHub repo. We've done most of the difficult bits already. There are just a few steps left:
+
+1. Create an account with the hosting provider
+
+2. Link our GitHub repo with the host
+
+3. Set up a PostgreSQL database with the host
+
+4. Store the key-value pairs for our environment variables with our host
+
+
+
+Create an account e.g., on render.com
+
+
+Heroku discontinued their free plan, but other providers are still offering one. You can create an account on render.com simply by signing up via Github.
+
+<img width="3044" height="978" alt="image" src="https://github.com/user-attachments/assets/46904683-c319-4230-9f22-2fefda163a21" />
+
+Click "authorize" and confirm your email address. Job done.
+<img width="1344" height="1758" alt="image" src="https://github.com/user-attachments/assets/b7400bdd-1331-4485-bcb0-e17b056950fb" />
+
+**Create a new Web Service**
+<img width="1358" height="880" alt="image" src="https://github.com/user-attachments/assets/bb085dbc-3e67-4a71-8c3e-9324dce108c6" />
+Choose your blog app that you've uploaded to GitHub and connect your repo
+
+<img width="1718" height="684" alt="image" src="https://github.com/user-attachments/assets/7ffc3307-429d-438c-8045-53a7003b3e24" />
+
+**Edit the Start Command**
+Most of render.com's defaults are fine. All you need to do is pick a name for your project and then change the Start Command to:
+
+_gunicorn main:app_
+
+<img width="1318" height="576" alt="image" src="https://github.com/user-attachments/assets/e0d6dca9-e201-496d-83b4-5847dbb1aa1d" />
+
+**Add your first environment variable**
+Before you create your web service, click "Advanced" and add your environment variable your Flask app.
+
+<img width="3406" height="616" alt="image" src="https://github.com/user-attachments/assets/ca5ee445-3dc7-4383-8cb8-db76a56b5441" />
+Scroll to the bottom and create your web service.
+
+<img width="546" height="172" alt="image" src="https://github.com/user-attachments/assets/107f0a4d-1eae-4609-a0bc-48017092d8c6" />
+
+Your web app won't work yet, however. We first need to set up our database and set the environment variable for SQLAlchemy.
+</p>
