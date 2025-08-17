@@ -139,7 +139,7 @@ In summary, while MD5 may still have non-security-critical applications, bcrypt 
 8. git checkout . will rollback any pending commit (after git add )
 9. git diff filename   --> give the different between add/ committed file
 
-10. git remote add origin GitHub .git path
+10. git remote add origin <GitHub .git path>
 11. git branch _m main
 12. git push -u origin main
 
