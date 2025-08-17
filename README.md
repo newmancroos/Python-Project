@@ -125,5 +125,23 @@ In summary, while MD5 may still have non-security-critical applications, bcrypt 
 
 ## Salt Round
 - Adding salt to a password and Hashing it is Round One <br/>
+
+
+## Github push an existing project
+
+1. Install Gitbash
+2. Within working directory -. git init
+3. git status  ->  gives pending commit files
+4. git add . --> Ready to commit
+5. git commit -m "message"   --> it will locally commit the changes
+6. git log  -> give details about the last commit
+7. Git add adds the files to staging and then git commit adds it to local git
+8. git checkout . will rollback any pending commit (after git add )
+9. git diff filename   --> give the different between add/ committed file
+
+10. git remote add origin GitHub .git path
+11. git branch _m main
+12. git push -u origin main
+
 - Adding Salt to the Password and Hasing, and then adding another salt to the Hashed code and then Hashing it again is Rout Two. It will go more round
   
