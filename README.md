@@ -159,7 +159,7 @@ WSGI stands for **Web Server Gateway Interface** and it's described here: https:
 
 In summary: normal web servers can't run Python applications, so a special type of server was created (WSGI) to run our Flask app.  Essentially, a WSGI server standardises the language and protocols between our Python Flask application and the host server.
 
-There are many WSGIs to choose from, but we'll use the most popular - gunicorn. That way our hosting provider will call gunicorn to run our code.
+There are many WSGIs to choose from, but we'll use the most popular -** gunicorn**. That way our hosting provider will call gunicorn to run our code.
 
 Next, we need to tell our hosting provider about our gunicorn server, what our app is called, and how to run our Flask app. We do that using a config file called a Procfile.
 
@@ -180,4 +180,23 @@ web: gunicorn main:app
 This will tell our hosting provider to create a web worker that is able to receive HTTP requests. The Procfile also says to use gunicorn to serve your web app. And finally it specifies the Flask app object is the main.py file. That way the hosting provider knows about the entry point for the app and what our app is called.
 
 
+</p>
+<p>
+    Create an account with a hosting provider
+There are many different hosting providers to choose from when it comes to making your app go live on the internet. Features and pricing vary between them and their pricing plans can change. It's up to you who you want to choose. For this tutorial, I will show you how to host on render.com <br/>
+<pre>
+Provider                   ~Cost / Month           Name of Plan
+
+Heroku                                $5                      Eco & Basic
+
+render                                  $0                      Individual
+
+Cyclic                                   $0                      Free Forever
+
+Glitch                                   $0                      Starter
+
+Vercel                                  $0                       Hobby
+
+PythonAnywhere              $0                       Beginner 
+</pre>
 </p>
