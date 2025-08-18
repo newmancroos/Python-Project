@@ -287,5 +287,13 @@ You just need to make one small modification. Change the first part from ** post
 
 
 
+Reder will automatically deploy the changes. If we get any error like 
+<pre>
+    AssertionError: Class <class 'sqlalchemy.sql.elements.SQLCoreOperations'> directly inherits TypingOnly but has additional attributes
+</pre>
 
-
+run 
+<pre>
+    pip install --upgrade Flask-SQLAlchemy SQLAlchemy
+</pre>
+ and noted the latest version of SqlAlchemy and updated the version in the requirements.txt and push the changes to github.
