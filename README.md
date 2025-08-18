@@ -247,3 +247,45 @@ Scroll to the bottom and create your web service.
 
 Your web app won't work yet, however. We first need to set up our database and set the environment variable for SQLAlchemy.
 </p>
+
+
+**Create a new Postgres Database**
+
+1. Create a new Postgres database from the website menu.
+
+<img width="934" height="1028" alt="image" src="https://github.com/user-attachments/assets/b165fd0e-f77f-4bb3-87b9-625661e2468e" />
+
+Next, you will see a form. All you need to do is pick a name for the database and create it. <br/>
+
+<img width="2558" height="1288" alt="image" src="https://github.com/user-attachments/assets/a0c2fcb0-ca58-4f79-96f5-d5bef509f70b" />
+
+**Copy the internal database URL**
+Once you've created your database, go and find the Internal Database URL in the Info section. You might have to wait a little while until your database is created.
+
+
+<img width="2518" height="1165" alt="image" src="https://github.com/user-attachments/assets/60a5c98e-7255-4abf-904c-b3253645d866" />
+
+Afterwards, simply copy this URL. You will shortly use this as an environment variable.
+
+<img width="1278" height="544" alt="image" src="https://github.com/user-attachments/assets/dd8e3cbf-0ea7-4418-8e4e-80ce5992d0f6" />
+
+**Set your SQLALCHEMY_DATABASE_URI environment variable**
+Go back to your web service settings called "environment".  Create an environment variable that matches the name of the key you're using in the main.py.
+
+
+<img width="3792" height="740" alt="image" src="https://github.com/user-attachments/assets/6b0d05ae-9b25-4841-8eb4-be89069d0fcf" />
+
+**Paste your internal database URL as the key value. It should look something like this:**
+
+**postgres://example_ig2c_user:u0E_lots_of_Symbols_here@dpg-c_more_symbols3bj85d0-a/example_ig2c**
+
+You just need to make one small modification. Change the first part from ** postgres to postgresql**. The URI has to start with "postgresql" because this is required by SQLAlchemy:
+
+
+<img width="2552" height="1142" alt="image" src="https://github.com/user-attachments/assets/f3aa5028-3433-4549-a192-5967d4298662" />
+
+
+
+
+
+
