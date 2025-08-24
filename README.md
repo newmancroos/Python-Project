@@ -318,5 +318,44 @@ Today's Learning Points
 
 * To create an Excel Style Pivot Table by grouping entries that belong to a particular category use the **.groupby() **method, **mean()**
 
+<pre>
+    import pandas as pd
 
+df = pd.read_csv('salaries_by_college_major.csv')
+# df
+# df.head() #display first page
+#df.shape   #number of rows and columns
+#df.columns  #listdown all columns
+#df.isna()   # check if there is NAN value in any column
+# df.tail()  # display last page records
+
+clean_df = df.dropna()
+# clean_df.tail()
+# clean_df["Starting Median Salary"]
+# clean_df["Starting Median Salary"].max()  #Gives Maximum Starting Median Salary column value from entrire DataFrame
+# clean_df["Starting Median Salary"].idxmax()  #Gives the index of the max column name
+# clean_df["Undergraduate Major"].loc[clean_df["Starting Median Salary"].idxmax()]  # Give a particular column that blong to a max Starting Medium Salary
+# clean_df.loc[43] # Display Entire rows
+
+# clean_df.loc[clean_df["Mid-Career Median Salary"].idxmax()]  #["Undergraduate Major"]
+
+spread_col = clean_df["Mid-Career 90th Percentile Salary"].subtract(clean_df["Mid-Career 10th Percentile Salary"])
+clean_df.insert(1,"Spread",spread_col)
+clean_df.tail()
+
+#low_risk = clean_df.sort_values("Spread", ascending=True)
+# low_risk["Undergraduate Major"]
+#low_risk[["Undergraduate Major","Spread"]].head()
+
+#We have three categories in the 'Group' column: STEM, HASS and Business. Let's count how many majors we have in each category:
+# clean_df.groupby('Group').count()
+
+#for Mean
+# clean_df.groupby('Group').mean()  #not working because there is npon nunberic fields Undergraduate Major is there.
+
+pd.options.display.float_format = '{:,.2f}'.format
+for_mean = clean_df[["Starting Median Salary","Spread","Mid-Career Median Salary","Group"]]
+for_mean.groupby('Group').mean()
+
+</pre>
 
