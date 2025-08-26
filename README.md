@@ -359,3 +359,9 @@ for_mean.groupby('Group').mean()
 
 </pre>
 
+
+* Change engtire column to Date:
+<pre>
+    df.DATE =pd.to_datetime(df.DATE)
+    df.head()
+</pre>
