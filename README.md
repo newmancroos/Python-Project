@@ -392,6 +392,28 @@ reshaped_df.fillna(0, inplace=True)
 # reshaped_df.isna().values.any()
 plt.plot(reshaped_df.index, reshaped_df.java)
 plt.plot(reshaped_df.index, reshaped_df['java'])
+
+
+plt.figure(figsize=(16,10))
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.xlabel("Date",fontsize=14)
+plt.ylabel("Number of posts",fontsize=14)
+plt.ylim(0, 35000)  #y-axis lower limit
+
+plt.plot(reshaped_df.index, reshaped_df.java)
+# plt.plot(reshaped_df.index, reshaped_df['java'],reshaped_df['python'])  #multiple comparision in single line
+# plt.plot(reshaped_df.index, reshaped_df['java'])
+# plt.plot(reshaped_df.index, reshaped_df['python'])
+
+# for column in reshaped_df.columns:
+#   plt.plot(reshaped_df.index, reshaped_df[column])
+
+for column in reshaped_df.columns:
+  plt.plot(reshaped_df.index, reshaped_df[column], 
+          linewidth=3, label=reshaped_df[column].name)
+
+plt.legend(fontsize=16) 
 </pre>
 
 <p>
