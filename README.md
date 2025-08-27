@@ -363,5 +363,51 @@ for_mean.groupby('Group').mean()
 * Change engtire column to Date:
 <pre>
     df.DATE =pd.to_datetime(df.DATE)
+    
     df.head()
 </pre>
+
+
+## Matplotlib
+<p>
+    To create our first charts we're going to use a library called Matplotlib. There are many different libraries in Python to help us create charts and graphs. Matplotlib is an incredibly popular one and it works beautifully in combination with Pandas
+</p>
+
+<pre>
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    df = pd.read_csv('QueryResults.csv', names=['DATE','TAG','POSTS'], header=0)
+    df.groupby("TAG").count()
+    df.groupby("TAG").sum()
+    df["DATE"][0]
+    pd.to_datetime(df["DATE"][0])
+    type(pd.to_datetime(df["DATE"][1]))
+    df.DATE =pd.to_datetime(df.DATE)
+
+    reshaped_df = df.pivot(index="DATE", columns="TAG", values="POSTS")
+reshaped_df
+# reshaped_df.columns
+# reshaped_df.count()
+reshaped_df.fillna(0, inplace=True)
+# reshaped_df.isna().values.any()
+plt.plot(reshaped_df.index, reshaped_df.java)
+plt.plot(reshaped_df.index, reshaped_df['java'])
+</pre>
+
+<p>
+    Styling the Chart
+
+Let's look at a couple of methods that will help us style our chart:
+
+.figure() - allows us to resize our chart
+
+.xticks() - configures our x-axis
+
+.yticks() - configures our y-axis
+
+.xlabel() - add text to the x-axis
+
+.ylabel() - add text to the y-axis
+
+.ylim() - allows us to set a lower and upper bound
+</p>
