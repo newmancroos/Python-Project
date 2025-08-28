@@ -433,3 +433,19 @@ Let's look at a couple of methods that will help us style our chart:
 
 .ylim() - allows us to set a lower and upper bound
 </p>
+
+* It is dificult to read the graph values when we directly map the actual values, so we can map it to "mean" value
+  <pre>
+      roll_df = reshaped_df.rolling(window=6).mean()
+plt.figure(figsize=(16,10))
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.xlabel("Date", fontsize=14)
+plt.ylabel("Number of posts", fontsize=14)
+plt.ylim(0, 3500)
+
+for column in roll_df.columns:
+  plt.plot(roll_df.index,roll_df[column], linewidth=3, label=roll_df[column].name)
+
+plt.legend(fontsize=14)
+  </pre>
