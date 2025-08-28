@@ -449,4 +449,5 @@ Let's look at a couple of methods that will help us style our chart:
     plt.plot(roll_df.index,roll_df[column], linewidth=3, label=roll_df[column].name)
     
     plt.legend(fontsize=14)
+      plt.savefig("my_plot.png")  #This will save the graph as jpgor pnp file
   </pre>
