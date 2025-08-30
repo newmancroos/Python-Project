@@ -461,3 +461,20 @@ We can use where clause in Pandas:
     colors.is_trans.value_counts()  # do the same as groupby- number of members of each category
     colors.where(colors["is_trans"]=="f")
 </pre>
+
+
+## Reading Lego Dataframe
+
+<pre>
+    sets = pd.read_csv("data/sets.csv")
+sets.head()
+sets.sort_values('year').head()
+sets[sets['year']==1949]
+
+sets.sort_values('num_parts', ascending=False).head() # find row with largest num_parts
+</pre>
+Output and data structure: <br/>
+
+<img width="546" height="203" alt="image" src="https://github.com/user-attachments/assets/8155352a-f80f-4c98-9c39-7e21ed9f3680" />
+
+
