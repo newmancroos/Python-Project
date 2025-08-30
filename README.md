@@ -472,6 +472,7 @@ sets.sort_values('year').head()
 sets[sets['year']==1949]
 
 sets.sort_values('num_parts', ascending=False).head() # find row with largest num_parts
+sets.groupby('year').count()   #Yearwise model count
 </pre>
 Output and data structure: <br/>
 
