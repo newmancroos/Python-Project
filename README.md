@@ -451,3 +451,13 @@ Let's look at a couple of methods that will help us style our chart:
     plt.legend(fontsize=14)
       plt.savefig("my_plot.png")  #This will save the graph as jpgor pnp file
   </pre>
+
+We can use where clause in Pandas:
+<pre>
+
+        #colors.groupby("name").count()
+    colors['name'].nunique()
+    colors.groupby("is_trans").count()   #Group by and gives the count
+    colors.is_trans.value_counts()  # do the same as groupby- number of members of each category
+    colors.where(colors["is_trans"]=="f")
+</pre>
