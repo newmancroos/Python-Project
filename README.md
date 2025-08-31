@@ -492,3 +492,13 @@ plt.plot(sets_by_year.index[:-2], sets_by_year.set_num[:-2])  #  list slicing is
     
     
 </pre>
+
+Agg funtion:
+
+<pre>
+    themes_by_year = sets.groupby("year").agg({"theme_id": pd.Series.nunique})
+    themes_by_year.rename(columns={'theme_id' : 'nr_themes'}, inplace=True)
+    themes_by_year.head()
+    themes_by_year.tail()
+    plt.plot(themes_by_year.index[:-2], themes_by_year.nr_themes[:-2])
+</pre>
