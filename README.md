@@ -479,3 +479,16 @@ Output and data structure: <br/>
 <img width="546" height="203" alt="image" src="https://github.com/user-attachments/assets/8155352a-f80f-4c98-9c39-7e21ed9f3680" />
 
 
+### Chart for Data
+
+<pre>
+import matplotlib.pyplot as plt
+
+sets_by_year = sets.groupby("year").count()
+# sets_by_year
+sets_by_year["set_num"].head()
+# plt.plot(sets_by_year.index, sets_by_year.set_num)  # we don;t have data for last year
+plt.plot(sets_by_year.index[:-2], sets_by_year.set_num[:-2])  #  list slicing is list_name[start:stop:step]
+    
+    
+</pre>
