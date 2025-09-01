@@ -501,4 +501,16 @@ Agg funtion:
     themes_by_year.head()
     themes_by_year.tail()
     plt.plot(themes_by_year.index[:-2], themes_by_year.nr_themes[:-2])
+
+plt.plot(themes_by_year.index[:-2], themes_by_year.nr_themes[:-2])
+plt.plot(sets_by_year.index[:-2], sets_by_year.set_num[:-2])
+    
+#set_by_year and theme_by_year has two dfferent scales. So we can create two axis
+
+ax1 = plt.gca() #get current axis
+ax2 = plt.twinx()  # second axis
+
+ax1.plot(themes_by_year.index[:-2], themes_by_year.nr_themes[:-2], color='g')
+ax2.plot(sets_by_year.index[:-2], sets_by_year.set_num[:-2], color='b')
+    
 </pre>
